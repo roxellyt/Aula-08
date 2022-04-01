@@ -6,12 +6,23 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
+import { TemporizadorComponent } from './temporizador/temporizador.component';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule,  RouterModule.forRoot([
-    { path: '', component: HomeComponent }]),
-],
-  declarations: [AppComponent, HelloComponent, HomeComponent],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent },
+      { path: 'temporizador', component: TemporizadorComponent },
+    ]),
+  ],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    HomeComponent,
+    TemporizadorComponent,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
