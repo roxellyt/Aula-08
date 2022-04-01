@@ -6,8 +6,15 @@ export class TemporizadorService {
   private counter: 0;
   constructor() {}
 
-  start(ms: number) {}
-  stop(){
-    
+  start(ms: number) {
+    if (!this.timer) {
+      this.timer = setInterval(() => {
+        this.counter++;
+      }, ms);
+    }
+  }
+  stop() {}
+  getCount() {
+    return this.counter;
   }
 }
