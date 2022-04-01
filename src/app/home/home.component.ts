@@ -1,18 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { TemporizadorService } from '../temporizador.service';
+import { TimerService } from '../timer.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-
-  constructor( public timer: TemporizadorService) {
-    this.timer.start;
-   }
-
-  ngOnInit() {
+  constructor(public timer: TimerService) {
+    this.timer.start(1000);
   }
 
+  ngOnInit() {}
 }

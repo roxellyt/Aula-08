@@ -7,7 +7,7 @@ import { HelloComponent } from './hello.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { TemporizadorComponent } from './temporizador/temporizador.component';
-import { TemporizadorService } from './temporizador.service';
+import { TimerService } from './timer.service';
 
 @NgModule({
   imports: [
@@ -15,7 +15,7 @@ import { TemporizadorService } from './temporizador.service';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: 'temporizador', component: TemporizadorComponent },
+      { path: '/timer', component: TemporizadorComponent },
     ]),
   ],
   declarations: [
@@ -25,6 +25,6 @@ import { TemporizadorService } from './temporizador.service';
     TemporizadorComponent,
   ],
   bootstrap: [AppComponent],
-  providers: [TemporizadorService],
+  providers: [TimerService],
 })
 export class AppModule {}
