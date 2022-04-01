@@ -13,7 +13,12 @@ export class TemporizadorService {
       }, ms);
     }
   }
-  stop() {}
+  stop() {
+    if(this.timer){
+      clearInterval(this.timer);
+      this.timer = null;
+    }
+  }
   getCount() {
     return this.counter;
   }
