@@ -1,0 +1,10 @@
+<h3 style="text-align:center; font-family: Verdana">Tarefas:</h3>
+<div style="margin-left:50px">
+  <input #input type="text" />
+  <button (click)="tasks.add(input.value); input.value=''">Adicionar</button>
+</div>
+<ul>
+  <li *ngFor="let tasks of tasks.getList(), index as i">
+    {{tasks.title}}
+  </li>
+</ul>

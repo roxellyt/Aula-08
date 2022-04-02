@@ -18,6 +18,8 @@ import { TasksComponent } from './tasks/tasks.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'temporizador', component: TemporizadorComponent },
+      { path: 'tasks', component: TasksComponent },
+
     ]),
   ],
   declarations: [
