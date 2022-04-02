@@ -15,7 +15,7 @@ import { TimerService } from './timer.service';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: '/timer', component: TemporizadorComponent },
+      { path: 'temporizador', component: TemporizadorComponent },
     ]),
   ],
   declarations: [
