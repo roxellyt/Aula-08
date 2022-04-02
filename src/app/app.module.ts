@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { TemporizadorComponent } from './temporizador/temporizador.component';
 import { TimerService } from './timer.service';
+import { TasksService } from './tasks.service';
 
 @NgModule({
   imports: [
@@ -25,6 +26,6 @@ import { TimerService } from './timer.service';
     TemporizadorComponent,
   ],
   bootstrap: [AppComponent],
-  providers: [TimerService],
+  providers: [TimerService, TasksService],
 })
 export class AppModule {}

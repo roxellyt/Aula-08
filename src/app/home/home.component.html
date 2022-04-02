@@ -1,4 +1,9 @@
-<h3 style="text-align:center; font-family: Verdana">Roxelly Tavares</h3>
-<h3 style="text-align:center; font-family: Verdana">RA: 0050831811029</h3>
+<h3 style="text-align:center; font-family: Verdana">
+  Roxelly Tavares | RA: 0050831811029
+</h3>
 <h3 style="text-align:center; font-family: Verdana">Temporizador:</h3>
 <h3 style="text-align:center; font-family: Verdana">{{ timer.getCount() }}</h3>
+<div style="margin-left:110px">
+  <button (click)="timer.start(1000)">Iniciar</button>
+  <button (click)="timer.stop()">Parar</button>
+</div>
