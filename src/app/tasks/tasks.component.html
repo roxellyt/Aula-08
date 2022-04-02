@@ -1,10 +1,18 @@
 <h3 style="text-align:center; font-family: Verdana">Tarefas:</h3>
-<div style="margin-left:50px">
+<div style="margin-left:40px">
   <input #input type="text" />
   <button (click)="tasks.add(input.value); input.value=''">Adicionar</button>
 </div>
+<UL>
+<li *ngFor="let n of Materia()">
+{{n}}
+</li>
+</UL>
 <ul>
-  <li *ngFor="let tasks of tasks.getList(), index as i">
-    {{tasks.title}}
+  <li *ngFor="let task of tasks.getList(), index as i">
+  {{task.title}}
+    
+    <span (click)="tasks.remove(i)" style="cursor: pointer;"> - </span>
   </li>
 </ul>
+ 

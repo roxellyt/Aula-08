@@ -1,22 +1,22 @@
 import { Injectable } from '@angular/core';
 
-interface Task{
+interface Task {
   title: string;
 }
 
 @Injectable()
 export class TasksService {
-  list: Array<Task> = []
+  list: Array<Task> = [];
+  constructor() {}
 
-  constructor() { }
-
-  getList(){
-    return this.list;
+  add(title: string) {
+    this.list.push({ title });
   }
-  add(title: string){
-    this.list.push({title});
-  }
-  remove(index: number){
+  remove(index: number) {
     this.list.splice(index, 1);
+  }
+
+  getList() {
+    return this.list;
   }
 }

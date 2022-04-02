@@ -8,6 +8,10 @@ import { TasksService } from '../tasks.service';
 })
 export class TasksComponent implements OnInit {
 
+  Materia() {
+    return ['Topicos Especiais - Angular - Sexta-Feira - 19h00 as 22h30', 'Desenvolvimento para Web - Flutter - Segunda-feira - 19h00 as 22h30'];
+  }
+
   constructor(public tasks: TasksService) { }
 
   ngOnInit() {
